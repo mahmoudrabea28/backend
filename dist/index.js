@@ -13,11 +13,9 @@ app.use((0, cors_1.default)({
     credentials: true,
     origin: ["http://localhost:4200"]
 }));
-
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
+app.get("/", function (req, res) {
+    res.send("hi world!");
 });
-
 app.get("/api/foods", function (req, res) {
     res.send(data_1.sample_foods);
 });
